@@ -54,3 +54,4 @@ obj-$(CONFIG_USB_WUSB)		+= wusbcore/
 obj-$(CONFIG_EXFAT_FS)		+= exfat/
 obj-$(CONFIG_QLGE)		+= qlge/
 obj-$(CONFIG_VBOXSF_FS)		+= vboxsf/
+obj-$(CONFIG_GSLX680)		+= gslx680/
