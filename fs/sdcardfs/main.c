@@ -57,11 +57,6 @@ static const struct fs_parameter_spec sdcardfs_param_specs[] = {
 	{}
 };
 
-static const struct fs_parameter_description sdcardfs_parameters = {
-	.name	= "sdcardfs",
-	.specs	= sdcardfs_param_specs,
-};
-
 static int sdcardfs_parse_param(struct fs_context *fc, struct fs_parameter *param)
 {
 	struct sdcardfs_context_options *fc_opts = fc->fs_private;
@@ -70,7 +65,7 @@ static int sdcardfs_parse_param(struct fs_context *fc, struct fs_parameter *para
 	struct fs_parse_result result;
 	int opt;
 
-	opt = fs_parse(fc, &sdcardfs_parameters, param, &result);
+	opt = fs_parse(fc, &sdcardfs_param_specs, param, &result);
 	if (opt < 0)
 		return opt;
 
